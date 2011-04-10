@@ -1,0 +1,20 @@
+project TumblrLib is
+
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+   for Library_Name use "tumblrlib";
+   for Library_Dir use "lib";
+   for Library_Kind use "dynamic";
+   for Library_Interface use ("tumblrlib");
+   for Library_Auto_Init use "False";
+
+   package Ide is
+      for Vcs_Kind use "Git";
+   end Ide;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnat05", "-gnatf", "-g");
+   end Compiler;
+
+end TumblrLib;
+
